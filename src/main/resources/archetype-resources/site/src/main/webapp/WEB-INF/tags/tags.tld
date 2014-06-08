@@ -1,0 +1,68 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+#set($hyphen = '-')
+#set($empty = '')
+#set($namespace = ${rootArtifactId.replace($hyphen,$empty)})
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd" version="2.0">
+
+	<description>Project specific tag library</description>
+	<display-name>Project Tag Library</display-name>
+	<tlib-version>1.0</tlib-version>
+	<short-name>projectTaglib</short-name>
+	<uri>http://open-web.nl/tags/${namespace}/1.0</uri>
+	
+	<tag-file>
+		<name>catalogassetvideo</name>
+		<path>/WEB-INF/tags/catalogassetvideo.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>easyform</name>
+		<path>/WEB-INF/tags/easyform.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>facetednavigation</name>
+		<path>/WEB-INF/tags/facetednavigation.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>formfieldvalidation</name>
+		<path>/WEB-INF/tags/formfieldvalidation.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>pagenotfound</name>
+		<path>/WEB-INF/tags/pagenotfound.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>pages</name>
+		<path>/WEB-INF/tags/pages.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>resultsummary</name>
+		<path>/WEB-INF/tags/resultsummary.tag</path>
+	</tag-file>
+
+	<function>
+		<description>check if form field has errors</description>
+		<name>getFieldError</name>
+		<function-class>${package}.tags.Functions</function-class>
+		<function-signature>java.lang.String getFieldError(java.util.LinkedHashMap, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<description>check if form field has errors</description>
+		<name>isFieldValid</name>
+		<function-class>${package}.tags.Functions</function-class>
+		<function-signature>boolean isFieldValid(java.util.LinkedHashMap, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<description>get browser title from channel configuration</description>
+		<name>getDefaultBrowserTitle</name>
+		<function-class>${package}.tags.Functions</function-class>
+		<function-signature>java.lang.String getDefaultBrowserTitle(org.hippoecm.hst.core.component.HstRequest)</function-signature>
+	</function>
+
+</taglib>

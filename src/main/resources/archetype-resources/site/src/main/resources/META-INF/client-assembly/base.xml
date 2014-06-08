@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:lang="http://www.springframework.org/schema/lang" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/lang http://www.springframework.org/schema/beans/spring-lang-3.0.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<bean id="greeting" class="java.lang.String">
+		<constructor-arg>
+			<value>Hello, HST-2!</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="containerComponentManager" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetClass" value="org.hippoecm.hst.site.HstServices" />
+		<property name="targetMethod" value="getComponentManager" />
+	</bean>
+
+	<bean id="javax.jcr.Repository" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetObject" ref="containerComponentManager" />
+		<property name="targetMethod" value="getComponent" />
+		<property name="arguments">
+			<list>
+				<value>javax.jcr.Repository</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="javax.jcr.Credentials.hstconfigreader" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetObject" ref="containerComponentManager" />
+		<property name="targetMethod" value="getComponent" />
+
+		<property name="arguments">
+			<list>
+				<value>javax.jcr.Credentials.hstconfigreader</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- CachingPropertiesManager for <site-root>/labels, works in combination with PropertiesEventListener below -->
+	<bean id="org.onehippo.forge.properties.api.PropertiesManager.labels" class="org.onehippo.forge.properties.impl.CachingMapPropertiesManagerImpl">
+		<property name="defaultDocumentLocation" value="messages" />
+		<property name="defaultDocumentName" value="labels" />
+	</bean>
+
+	<!-- Set up a PropertiesEventListener listening for changes on properties:properties documents to invalidate caching. Needs set up of containerComponentManager, 
+		repository and credentials beans -->
+	<bean id="org.hippoecm.hst.core.jcr.EventListenersContainer" class="org.hippoecm.hst.core.jcr.EventListenersContainerImpl" init-method="start"
+		destroy-method="stop">
+		<property name="repository" ref="javax.jcr.Repository" />
+		<property name="sessionLiveCheck" value="true" />
+		<property name="credentials" ref="javax.jcr.Credentials.hstconfigreader" />
+		<property name="sessionLiveCheckInterval" value="60000" />
+		<property name="eventListenerItems">
+			<list>
+				<bean class="org.hippoecm.hst.core.jcr.EventListenerItemImpl">
+					<property name="nodeAddedEnabled" value="false" />
+					<property name="nodeRemovedEnabled" value="false" />
+					<property name="propertyAddedEnabled" value="false" />
+					<property name="propertyChangedEnabled" value="true" />
+					<property name="propertyRemovedEnabled" value="false" />
+					<property name="absolutePath" value="/" />
+					<property name="deep" value="true" />
+					<property name="uuids">
+						<null />
+					</property>
+					<property name="nodeTypeNames" value="properties:properties" />
+					<property name="noLocal" value="false" />
+					<property name="eventListener">
+						<bean class="org.onehippo.forge.properties.listener.PropertiesEventListener">
+							<property name="propertiesManager" ref="org.onehippo.forge.properties.api.PropertiesManager.labels" />
+						</bean>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+</beans>

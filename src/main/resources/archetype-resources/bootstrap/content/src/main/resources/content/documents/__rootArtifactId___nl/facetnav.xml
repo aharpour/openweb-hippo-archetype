@@ -1,0 +1,50 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+#set($hyphen = '-')
+#set($empty = '')
+#set($namespace = ${rootArtifactId.replace($hyphen,$empty)})
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="facetnav" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippofacnav:facetnavigation</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippo:count" sv:type="Long">
+    <sv:value>12</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippo:docbase" sv:type="String">
+    <sv:value>cccbbaaa-f32c-4847-9a25-e5e86d612b4b</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:facetnodenames" sv:type="String" sv:multiple="true">
+    <sv:value>Type</sv:value>
+    <sv:value>Year</sv:value>
+    <sv:value>Month${symbol_dollar}{after:'Year', hide:'Year'}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:facets" sv:type="String" sv:multiple="true">
+    <sv:value>jcr:primaryType</sv:value>
+    <sv:value>tdc:releaseDate${symbol_dollar}year</sv:value>
+    <sv:value>${namespace}:month</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:filters" sv:type="String" sv:multiple="true">
+    <sv:value>hippo:availability=live</sv:value>
+    <sv:value>jcr:primaryType!=selection:valuelist</sv:value>
+    <sv:value>jcr:primaryType!=${namespace}:GenericPage</sv:value>
+    <sv:value>jcr:primaryType!=properties:properties</sv:value>
+    <sv:value>jcr:primaryType!=${namespace}:CarouselBanner</sv:value>
+    <sv:value>jcr:primaryType!=${namespace}:${namespace.substring(0,1).toUpperCase()}${namespace.substring(1)}ImageSet</sv:value>
+    <sv:value>jcr:primaryType!=ef:form</sv:value>
+    <sv:value>jcr:primaryType!=robotstxt:robotstxt</sv:value>
+    <sv:value>jcr:primaryType!=${namespace}:Banner</sv:value>
+    <sv:value>not(tdc:hideFromSearch=true)</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:limit" sv:type="Long">
+    <sv:value>100</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:skipresultsetfacetnavigationroot" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:skipresultsetfacetsavailable" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+</sv:node>
+	

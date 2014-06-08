@@ -1,0 +1,128 @@
+#set($hyphen = '-')
+#set($empty = '')
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="${rootArtifactId.replace($hyphen,$empty)}-subsite" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippostd:folder</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>hippo:harddocument</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+    <sv:value>new-document</sv:value>
+    <sv:value>new-folder</sv:value>
+  </sv:property>
+  <sv:node sv:name="homepage">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:handle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>hippo:hardhandle</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value />
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>Home Page</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="home-page">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>${rootArtifactId.replace($hyphen,$empty)}:TextPage</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>hippo:harddocument</sv:value>
+        <sv:value>hippotranslation:translated</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+        <sv:value>preview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:holder" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2013-05-08T16:14:16.851+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2013-05-08T16:20:40.783+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2013-05-08T16:20:48.836+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>a4240db8-3b5d-45ce-96f0-a28ca3ba4003</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="tdc:author" sv:type="String">
+        <sv:value>configure in console together with release date</sv:value>
+      </sv:property>
+      <sv:property sv:name="tdc:browserTitle" sv:type="String">
+        <sv:value>${rootArtifactId.replace($hyphen,$empty)} Home Page Browser title</sv:value>
+      </sv:property>
+      <sv:property sv:name="tdc:description" sv:type="String">
+        <sv:value>${rootArtifactId.replace($hyphen,$empty)} Home Page Browser title Description</sv:value>
+      </sv:property>
+      <sv:property sv:name="tdc:hideFromSitemap" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="tdc:introduction" sv:type="String">
+        <sv:value>This is the home page of the generated HST website.</sv:value>
+      </sv:property>
+      <sv:property sv:name="tdc:keywords" sv:type="String">
+        <sv:value>Keywords Metatags (Search engine)</sv:value>
+      </sv:property>
+      <sv:property sv:name="tdc:releaseDate" sv:type="Date">
+        <sv:value>2013-05-08T16:14:36.532+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="tdc:subtitle" sv:type="String">
+        <sv:value>${rootArtifactId.replace($hyphen,$empty)} Home Page Subtitle</sv:value>
+      </sv:property>
+      <sv:property sv:name="tdc:title" sv:type="String">
+        <sv:value>${rootArtifactId.replace($hyphen,$empty)} Home Page Title</sv:value>
+      </sv:property>
+      <sv:node sv:name="hippotranslation:translations">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippotranslation:translations</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="${rootArtifactId.replace($hyphen,$empty)}:html">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippostd:html</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:content" sv:type="String">
+          <sv:value>&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Now go ahead and build your own website!&lt;/p&gt;
+
+&lt;p&gt;                             aaaand&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="openweb" target="_blank" href="http://open-web.nl/"&gt;Openweb&lt;/a&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+</sv:node>

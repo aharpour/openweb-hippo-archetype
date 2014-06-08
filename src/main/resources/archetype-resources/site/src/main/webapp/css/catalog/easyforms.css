@@ -1,0 +1,96 @@
+.catalog.easyforms{border: 1px solid #b77c7c; margin: 0 0 10px 0;}
+
+.catalog.easyforms .form div, label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+.catalog.easyforms h2{
+	text-align: center;
+}
+
+.catalog.easyforms .form div:hover {
+    background-color: #DAE6EF;
+}
+
+.catalog.easyforms .form div.error {
+    font-size: 0.8em;
+    color: #FF0000;
+    display: block;
+    background-color: #c91414;
+    border: 1px solid #ccc;
+    height: 20px;
+}
+
+.catalog.easyforms .ef-field input,
+.catalog.easyforms .ef-field textarea,
+.catalog.easyforms .ef-field select,
+.catalog.easyforms .uneditable-input {
+	display: block; width: 90%; height: 18px; margin: 2px auto; margin-bottom: 9px; clear: both;
+    font-size: 13px; line-height: 18px; color: #555555; background-color: #ffffff; border: 1px solid #cccccc;
+    -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;
+}
+
+.catalog.easyforms .uploadField input[type="file"] {
+    line-height: 18px \9;
+	margin-left: 7px;
+	clear: both;
+	display: block;
+}
+
+.catalog.easyforms .uploadField label{
+	float: left;
+	margin-left: 7px;
+}
+
+.message {
+	width: 100%;
+	background: #D5E6AF;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.message img {
+	float: left;
+	margin-left: 7px;
+	margin-top: 5px;
+}
+
+.catalog.easyforms span.ef-hint{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.catalog.easyforms fieldset.ef-field .errorField input, 
+.catalog.easyforms fieldset.ef-field .errorField textarea {
+	border: 2px solid red;
+}
+
+.catalog.easyforms p.formFieldError{
+	margin-left: 7px;
+	display: block;
+	color: red; 
+	float: left;
+}
+
+.catalog.easyforms .message.error.group {
+	width: 100%;
+	margin-bottom: 4px;
+	min-height: 40px;
+}
+
+.catalog.easyforms .message.error.group span.fieldError {
+	margin-left: 55px;
+	display: block;
+	margin-top: 4px;
+}
+
+.catalog.easyforms .ef-field label{
+	float: left;
+	margin-left: 7px;
+}
+
+.catalog.easyforms input[type="button"], input[type="reset"], input[type="submit"] {
+	display: block; width: 45%; height: auto; margin: 2px auto;
+}

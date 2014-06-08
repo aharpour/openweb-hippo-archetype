@@ -1,0 +1,29 @@
+-- Original License notice from Hippo -- 
+Hippo CMS7 Site Toolkit Maven Archetypes
+Copyright 2010-2013 Hippo B.V., Amsterdam, The Netherlands (http://www.onehippo.com/)
+
+This product includes software developed by:
+Hippo B.V., Amsterdam, The Netherlands (http://www.onehippo.com/);
+The Apache Software Foundation (http://www.apache.org/).
+
+NOTICE: Only our own original work is licensed under the terms of the
+Apache License Version 2.0. The licenses of some libraries might impose
+different redistribution or general licensing terms than those stated in the
+Apache License. Users and redistributors are hereby requested to verify these
+conditions and agree upon them.
+
+-- Smile B.V. License notice --
+Smile Hippo Quick Start Archetype
+Copyright 2013 Smile B.V.
+
+This product is based on Hippo CMS7 Site Toolkit Website Archetype (1.07.03) with some modification. 
+The modification done to Hippo CMS7 Site Toolkit Website Archetype in this project are 
+licensed to Smile B.V. Licensed under the Apache License, Version 2.0 (the "License");  
+
+-- Openweb IT Services License notice --
+Openweb Hippo Quick Start Archetype
+Copyright 2014 Openweb IT
+
+This product is based on Smile Hippo Quick Start Archetype with some modification. 
+The modification done to Smile Hippo Quick Start Archetype in this project are 
+licensed to Openweb IT Services. Licensed under the Apache License, Version 2.0 (the "License");  

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="_default_">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>frontend:plugincluster</sv:value>
+  </sv:property>
+  <sv:property sv:name="frontend:properties" sv:type="String" sv:multiple="true">
+    <sv:value>mode</sv:value>
+  </sv:property>
+  <sv:property sv:name="frontend:references" sv:type="String" sv:multiple="true">
+    <sv:value>wicket.model</sv:value>
+    <sv:value>engine</sv:value>
+  </sv:property>
+  <sv:property sv:name="frontend:services" sv:type="String" sv:multiple="true">
+    <sv:value>wicket.id</sv:value>
+  </sv:property>
+  <sv:property sv:name="mode" sv:type="String">
+    <sv:value>edit</sv:value>
+  </sv:property>
+  <sv:property sv:name="type" sv:type="String">
+    <sv:value>ef:form</sv:value>
+  </sv:property>
+  <sv:node sv:name="root">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="item" sv:type="String">
+      <sv:value>${cluster.id}.field</sv:value>
+    </sv:property>
+    <sv:property sv:name="layout.form" sv:type="String">
+      <sv:value>${cluster.id}.form</sv:value>
+    </sv:property>
+    <sv:property sv:name="layout.picker" sv:type="String">
+      <sv:value>${cluster.id}.picker</sv:value>
+    </sv:property>
+    <sv:property sv:name="layout.properties" sv:type="String">
+      <sv:value>${cluster.id}.properties</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.FormLayout</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.formlayout" sv:type="String">
+      <sv:value>${cluster.id}.service.formlayout</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.extensions" sv:type="String" sv:multiple="true">
+      <sv:value>layout.form</sv:value>
+      <sv:value>layout.picker</sv:value>
+      <sv:value>layout.properties</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${wicket.id}</sv:value>
+    </sv:property>
+    <sv:node sv:name="cluster.options">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>frontend:pluginconfig</sv:value>
+      </sv:property>
+      <sv:property sv:name="field.classes" sv:type="String" sv:multiple="true" />
+      <sv:property sv:name="field.exclude" sv:type="String" sv:multiple="true" />
+      <sv:property sv:name="field.include" sv:type="String" sv:multiple="true" />
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="form">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="engine" sv:type="String">
+      <sv:value>${engine}</sv:value>
+    </sv:property>
+    <sv:property sv:name="item" sv:type="String">
+      <sv:value>${cluster.id}.form.field</sv:value>
+    </sv:property>
+    <sv:property sv:name="layout.extensions" sv:type="String">
+      <sv:value>${cluster.id}.extensions</sv:value>
+    </sv:property>
+    <sv:property sv:name="mode" sv:type="String">
+      <sv:value>${mode}</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.form.FormPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.formlayout" sv:type="String">
+      <sv:value>${cluster.id}.service.formlayout</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.formplugin" sv:type="String">
+      <sv:value>${cluster.id}.service.formplugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.propertiesplugin" sv:type="String">
+      <sv:value>${cluster.id}.service.propertiesplugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.extensions" sv:type="String" sv:multiple="true">
+      <sv:value>layout.extensions</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.form</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>${wicket.model}</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="picker">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="engine" sv:type="String">
+      <sv:value>${engine}</sv:value>
+    </sv:property>
+    <sv:property sv:name="item" sv:type="String">
+      <sv:value>${cluster.id}.picker.field</sv:value>
+    </sv:property>
+    <sv:property sv:name="mode" sv:type="String">
+      <sv:value>${mode}</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.picker.PickerPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.formlayout" sv:type="String">
+      <sv:value>${cluster.id}.service.formlayout</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.formplugin" sv:type="String">
+      <sv:value>${cluster.id}.service.formplugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.pickerplugin" sv:type="String">
+      <sv:value>${cluster.id}.service.pickerplugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.propertiesplugin" sv:type="String">
+      <sv:value>${cluster.id}.service.propertiesplugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.picker</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>${wicket.model}</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="properties">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="engine" sv:type="String">
+      <sv:value>${engine}</sv:value>
+    </sv:property>
+    <sv:property sv:name="item" sv:type="String">
+      <sv:value>${cluster.id}.properties.field</sv:value>
+    </sv:property>
+    <sv:property sv:name="mode" sv:type="String">
+      <sv:value>${mode}</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.properties.PropertiesPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.formlayout" sv:type="String">
+      <sv:value>${cluster.id}.service.formlayout</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.formplugin" sv:type="String">
+      <sv:value>${cluster.id}.service.formplugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="service.propertiesplugin" sv:type="String">
+      <sv:value>${cluster.id}.service.propertiesplugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.properties</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>${wicket.model}</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="extensions">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="item" sv:type="String">
+      <sv:value>${cluster.id}.extensions.item</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.hippoecm.frontend.service.render.ListViewPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.extensions</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="submissionConfirmation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mode" sv:type="String">
+      <sv:value>${mode}</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.extensions.ConfirmationPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.extensions.item</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>${wicket.model}</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="counter">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mode" sv:type="String">
+      <sv:value>${mode}</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.extensions.FormCounterExtensionPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.extensions.item</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>${wicket.model}</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="formIntroduction">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mode" sv:type="String">
+      <sv:value>${mode}</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.extensions.FormIntroductionPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.extensions.item</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>${wicket.model}</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="mailFormData">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mode" sv:type="String">
+      <sv:value>${mode}</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.extensions.MailFormDataPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.extensions.item</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>${wicket.model}</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="storeformdata">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mode" sv:type="String">
+      <sv:value>${mode}</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.extensions.StoreFormDataPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.extensions.item</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>${wicket.model}</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="afterProcessing">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mode" sv:type="String">
+      <sv:value>${mode}</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.extensions.AfterProcessPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.extensions.item</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>${wicket.model}</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>

@@ -1,0 +1,142 @@
+/******************** general items ********************/
+.catalog {margin: 0 0 10px 0;}
+.catalog .error-message {color: red }
+.catalog .warn-message {color: orange; }
+/******************** End of general items ********************/
+
+/******************** latest items catalog - latest items catalog - latest items catalog ********************/
+
+.catalog.latestItems {border: 1px solid #cccccc;  margin: 0 0 10px 0; }
+.catalog.latestItems .widget-title { width: 100%; text-align: center; border-bottom: 1px solid #cccccc;	background-color: orange;}
+.catalog.latestItems .item-with-image .image-space{width: 62px; float: left; position: relative; margin-left: 3px; margin-top: 1px;}
+.catalog.latestItems .item-with-image .itemContent{ position:relative; display: inline-block; width: 139.5px; float: left; margin-left: 3px;}
+.catalog.latestItems .item-with-image div.clear-both { clear: both; }
+.catalog.latestItems.image-space div.date {margin-left: -2px;}
+.catalog.latestItems .read_more h4 {text-align: center;}
+.catalog.latestItems h2 {margin: 0; padding: 5px 0;}
+
+/******************** latest items catalog - latest items catalog - latest items catalog ********************/
+
+		
+/******************** twitter catalog - twitter catalog - twitter catalog ********************/
+
+.catalog.feed { font-size: 100%; background: url(../images/seperator-blogs.png) no-repeat center 30px;	margin: 0 0 10px 0; }
+.catalog.feed h2 {text-align: center; }
+.catalog.feed .box-general { margin: 0 0 10px 0; background: url(../images/box-bg-general.png) repeat-x left top; border: 1px solid #cccccc; padding: 5px; }
+.catalog.feed .box-general div.title { font-weight: bold; color: #666666; } 
+.catalog.feed .box-general .feed-item { min-height: 70px; padding-bottom: 5px; background: url(../images/seperator-blogs.png) no-repeat center bottom; }
+.catalog.feed .box-general .feed-item .image-date-container { position: relative; width: 80px; min-height: 70px; }
+.catalog.feed .box-general .feed-item .content-container {	position:relative; width:auto; margin: 0 0 0 80px; }
+.catalog.feed .box-general .feed-item .image-date-container .date { width: 90%; margin: auto; text-align: center; font-weight: bold; color: #007aa6; }
+.catalog.feed .box-general .feed-item .image-date-container .image { width:90%; margin: 1px auto; }
+.catalog.feed .box-general .feed-item .content-container .content { margin-top: -70px; }  
+.catalog.feed .box-general .feed-item .image-date-container .image img { width:85%; margin: 1px auto; }
+
+/**************** END - twitter catalog - twitter catalog - twitter catalog - END ****************/
+
+/**************** youtube catalog - youtube catalog - youtube catalog ****************/
+.youtube embed { width: 100%; }
+/**************** END - youtube catalog - youtube catalog - youtube catalog - END ****************/
+
+/**************** carousel catalog - carousel catalog - carousel catalog ****************/
+
+.catalog.carousel {
+	position: relative;
+}
+
+.catalog.carousel ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.catalog.carousel ul li a img {
+	width: 100%;
+}
+
+.catalog.carousel .caption {
+	background-color: #1F5591;
+	color: white;
+	font-size: 1em;
+	height: 2em;
+	margin: 0;
+}
+
+.catalog.carousel .caption p {
+	padding: 0.25em 0 0 0.5em;
+	margin: 0;
+}
+
+.catalog.carousel .carousel-tabs {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	bottom: 2.5em;
+	left: 1em;
+}
+
+.catalog.carousel .carousel-tabs li {
+	display: inline-block;
+	padding: 0 2px;
+}
+
+.catalog.carousel .carousel-tabs a {
+	background: #ddd;
+	display: inline-block;
+	height: 10px;
+	text-indent: -9999px;
+	width: 10px;
+	border-radius: 5px;
+	outline: none;
+}
+
+.ie .catalog.carousel .carousel-tabs li,.ie .catalog .carousel .carousel-tabs a
+	{
+	display: block;
+	float: left;
+}
+
+.catalog.carousel .carousel-tabs .carousel-active-tab a {
+	background: #777;
+}
+
+.catalog.carousel .carousel-item a {
+	display: block;
+	margin: 0;
+	ppadding: 0;
+	line-height: 0;
+}
+
+.catalog.carousel .controller {
+	width: 100%;
+	position: absolute;
+	top: 45%;
+	height:10%;
+	left: 0;
+}
+
+.catalog.carousel .controller {
+	outline: none;
+}
+
+.catalog.carousel .controller .previous {
+	float: left;
+	height: 100%;
+	width: 10%;
+}
+
+.catalog.carousel .controller .previous img{
+	height: 100%;
+}
+
+.catalog.carousel .controller .next {
+	float: right;
+	height: 100%;
+	width: 10%;
+}
+
+.catalog.carousel .controller .next img{
+	float: right;
+	height: 100%;
+}
+/**************** END - carousel catalog - carousel catalog - carousel catalog - END ****************/

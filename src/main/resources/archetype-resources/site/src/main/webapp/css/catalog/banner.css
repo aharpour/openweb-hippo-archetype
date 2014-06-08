@@ -1,0 +1,13 @@
+.catalog.banner {
+	position: relative;
+}
+
+.catalog.banner ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.catalog.banner ul li a img {
+	width: 100%;
+}

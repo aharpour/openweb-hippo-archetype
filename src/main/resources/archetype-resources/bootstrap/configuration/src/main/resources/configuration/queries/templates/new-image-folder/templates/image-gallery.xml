@@ -1,0 +1,11 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+#set($hyphen = '-')
+#set($empty = '')
+#set($namespace = ${rootArtifactId.replace($hyphen,$empty)})
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport" sv:name="image gallery" h:merge="combine">
+  <sv:property sv:name="hippostd:gallerytype" sv:type="String" h:merge="override">
+    <sv:value>${namespace}:${namespace.substring(0,1).toUpperCase()}${namespace.substring(1)}ImageSet</sv:value>
+  </sv:property>
+</sv:node>

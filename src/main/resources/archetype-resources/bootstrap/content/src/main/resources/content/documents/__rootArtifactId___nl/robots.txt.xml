@@ -1,0 +1,76 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+#set($hyphen = '-')
+#set($empty = '')
+#set($namespace = ${rootArtifactId.replace($hyphen,$empty)})
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="robots.txt" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippo:handle</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>hippo:hardhandle</sv:value>
+  </sv:property>
+  <sv:node sv:name="robots.txt">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>robotstxt:robotstxt</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>hippo:harddocument</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+      <sv:value>live</sv:value>
+      <sv:value>preview</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+      <sv:value>${namespace}_nl/robots.txt</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:holder" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:state" sv:type="String">
+      <sv:value>published</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+      <sv:value>live</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+      <sv:value>2013-07-02T15:17:53.736+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+      <sv:value>2013-07-02T15:22:26.919+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+      <sv:value>2013-07-02T15:22:29.098+02:00</sv:value>
+    </sv:property>
+    <sv:node sv:name="robotstxt:section">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>robotstxt:section</sv:value>
+      </sv:property>
+      <sv:property sv:name="robotstxt:disallow" sv:type="String" sv:multiple="true">
+        <sv:value>/articles</sv:value>
+      </sv:property>
+      <sv:property sv:name="robotstxt:useragent" sv:type="String">
+        <sv:value>*</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="robotstxt:section">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>robotstxt:section</sv:value>
+      </sv:property>
+      <sv:property sv:name="robotstxt:disallow" sv:type="String" sv:multiple="true">
+        <sv:value>/service</sv:value>
+      </sv:property>
+      <sv:property sv:name="robotstxt:useragent" sv:type="String">
+        <sv:value>*GoogleBoat</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>

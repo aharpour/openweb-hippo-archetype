@@ -1,0 +1,55 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+#set($hyphen = '-')
+#set($empty = '')
+#set($namespace = ${rootArtifactId.replace($hyphen,$empty)})
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="releaseDate">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:deriveddefinition</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:classname" sv:type="String">
+    <sv:value>project.${package}.derivatives.DerivedReleasedDate</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:nodetype" sv:type="String">
+    <sv:value>tdc:WebDocument</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:serialver" sv:type="Long">
+    <sv:value>1</sv:value>
+  </sv:property>
+  <sv:node sv:name="hipposys:accessed">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:propertyreferences</sv:value>
+    </sv:property>
+    <sv:node sv:name="releaseDate">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hipposys:relativepropertyreference</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:relPath" sv:type="String">
+        <sv:value>tdc:releaseDate</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="locale">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hipposys:relativepropertyreference</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:relPath" sv:type="String">
+        <sv:value>hippotranslation:locale</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="hipposys:derived">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:propertyreferences</sv:value>
+    </sv:property>
+    <sv:node sv:name="month">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hipposys:relativepropertyreference</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:relPath" sv:type="String">
+        <sv:value>${namespace}:month</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>

@@ -1,0 +1,105 @@
+#set($hyphen = '-')
+#set($empty = '')
+#set($namespace = ${rootArtifactId.replace($hyphen,$empty)})
+<'${namespace}'='http://www.onehippo.org/${namespace}/nt/1.0'>
+<'hippo'='http://www.onehippo.org/jcr/hippo/nt/2.0'>
+<'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
+<'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
+<'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
+<'tdc'='http://tdclighthouse.com/tdc/nt/1.0'>
+
+[${namespace}:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document orderable
+
+[${namespace}:ArticlePage] > tdc:ArticlePage, hippostd:relaxed
+
+[${namespace}:GenericPage] > tdc:WebDocument, hippostd:relaxed
+
+[${namespace}:TextPage] > ${namespace}:GenericPage, hippostd:relaxed
+
+[${namespace}:${namespace.substring(0,1).toUpperCase()}${namespace.substring(1)}ImageSet] > tdc:TdcImageSet, hippostd:relaxed
+
+[${namespace}:HomePage] > ${namespace}:GenericPage, hippostd:relaxed
+
+[${namespace}:CarouselBanner] > ${namespace}:basedocument, hippostd:relaxed, hippotranslation:translated orderable
+
+[${namespace}:Banner] > ${namespace}:basedocument, hippostd:relaxed, hippotranslation:translated orderable
+
+[${namespace}:AssetVideoParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:CarouselParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:LatestItemsSortSizeParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:LatestItemsParemeters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:LatestItemsOverviewParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:LatestItemsIntroParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:LatestItemsTitleParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:RssConfigurationParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:RssConnectionParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:YoutubePlayerParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:YoutubeUrlParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:MapDynamicParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:MapDynamicParametersSec] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:MapGeneralParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:MapStaticParameters] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:RssCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:CarouselCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:BannerCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:AssetVideoCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:LatestItemsCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:YoutubeCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:MapCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
+[${namespace}:CarouselBannerMixin]
+  mixin
+  + ${namespace}:carouselCompoundMixin (${namespace}:CarouselCompoundMixin)
+
+[${namespace}:LatestItemsMixin]
+  mixin
+  + ${namespace}:latestItemsCompoundMixin (${namespace}:LatestItemsCompoundMixin)
+    
+[${namespace}:EasyFormMixin]
+  mixin
+  + ${namespace}:formPicker (hippo:mirror)
+  
+[${namespace}:DiscussMixin]
+  mixin
+  
+[${namespace}:AssetVideoMixin]
+  mixin
+  + ${namespace}:assetVideoCompoundMixin (${namespace}:AssetVideoCompoundMixin)
+
+[${namespace}:YoutubeMixin]
+  mixin
+  + ${namespace}:youtubeCompoundMixin (${namespace}:YoutubeCompoundMixin)
+
+[${namespace}:RssMixin]
+  mixin
+  + ${namespace}:rssCompoundMixin (${namespace}:RssCompoundMixin)
+
+[${namespace}:GoogleMapMixin]
+  mixin
+  + ${namespace}:mapCompoundMixin (${namespace}:MapCompoundMixin)
+  
+[${namespace}:BannerMixin]
+  mixin
+  + ${namespace}:bannerCompoundMixin (${namespace}:BannerCompoundMixin)
+  

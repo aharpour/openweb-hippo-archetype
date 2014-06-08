@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="cluster.options" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>frontend:pluginconfig</sv:value>
+  </sv:property>
+  <sv:property sv:name="base.uuid" sv:type="String">
+    <sv:value>123e09b0-654f-4e98-9876-a730e8cb5abc</sv:value>
+  </sv:property>
+  <sv:property sv:name="last.visited.enabled" sv:type="String">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="nodetypes" sv:type="String">
+    <sv:value>hippogallery:exampleAssetSet</sv:value>
+  </sv:property>
+</sv:node>
+	

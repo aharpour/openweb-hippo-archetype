@@ -1,0 +1,72 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+#set($hyphen = '-')
+#set($empty = '')
+#set($namespace = ${rootArtifactId.replace($hyphen,$empty)})
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport" sv:name="cms" h:merge="combine">
+  <sv:node sv:name="cms-dashshortcuts" h:merge="combine">
+    <sv:node sv:name="FormsCreationShortcut">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>frontend:plugin</sv:value>
+      </sv:property>
+      <sv:property sv:name="baseFolder" sv:type="String">
+        <sv:value>/content/documents/${namespace}/components/forms</sv:value>
+      </sv:property>
+      <sv:property sv:name="browser.id" sv:type="String">
+        <sv:value>service.browse</sv:value>
+      </sv:property>
+      <sv:property sv:name="classificationType" sv:type="String">
+        <sv:value>list</sv:value>
+      </sv:property>
+      <sv:property sv:name="documentType" sv:type="String">
+        <sv:value>ef:form</sv:value>
+      </sv:property>
+      <sv:property sv:name="plugin.class" sv:type="String">
+        <sv:value>project.${package}.dashboardshortcuts.FormShortcutConfig</sv:value>
+      </sv:property>
+      <sv:property sv:name="query" sv:type="String">
+        <sv:value>new-easy-form</sv:value>
+      </sv:property>
+      <sv:property sv:name="valueListPath" sv:type="String">
+        <sv:value>/content/documents/valuelist/${namespace}/en/form-folders</sv:value>
+      </sv:property>
+      <sv:property sv:name="wicket.id" sv:type="String">
+        <sv:value>shortcut</sv:value>
+      </sv:property>
+      <sv:property sv:name="workaround" sv:type="Long">
+        <sv:value>7</sv:value>
+      </sv:property>
+      <sv:node sv:name="en">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:pluginconfig</sv:value>
+        </sv:property>
+        <sv:property sv:name="shortcut-link-label" sv:type="String">
+          <sv:value>New Form</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="nl">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:pluginconfig</sv:value>
+        </sv:property>
+        <sv:property sv:name="shortcut-link-label" sv:type="String">
+          <sv:value>Nieuw Formulier</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="cms-static" h:merge="combine">
+    <sv:node sv:name="easyformsLoader" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>frontend:plugin</sv:value>
+      </sv:property>
+      <sv:property sv:name="cluster.name" sv:type="String">
+        <sv:value>cms-easyforms-perspective</sv:value>
+      </sv:property>
+      <sv:property sv:name="plugin.class" sv:type="String">
+        <sv:value>org.hippoecm.frontend.plugin.loader.PluginClusterLoader</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>
