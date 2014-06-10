@@ -14,10 +14,10 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='properties' uri="http://www.onehippo.org/properties/jsp/tags"%>
 
-<c:if test="${not empty errorComponentWindow.componentExceptions}">
+<c:if test="${symbol_dollar}{not empty errorComponentWindow.componentExceptions}">
   <ul>
     <c:forEach var="componentException" items="${errorComponentWindow.componentExceptions}">
-      <li>${fn:escapeXml(componentException.message)}</li>
+      <li>${symbol_dollar}{fn:escapeXml(componentException.message)}</li>
     </c:forEach>
   </ul>
 </c:if>

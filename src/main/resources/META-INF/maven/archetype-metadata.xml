@@ -162,9 +162,6 @@
 
     <fileSet filtered="true" encoding="UTF-8">
       <directory>site/src/main/webapp</directory>
-      <excludes>
-        <exclude>**/WEB-INF/jsp/errorpages/*.jsp</exclude>
-      </excludes>
       <includes>
         <include>**/README</include>
         <include>**/*.jsp</include>
