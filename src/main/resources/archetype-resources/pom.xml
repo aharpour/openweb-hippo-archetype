@@ -62,7 +62,7 @@
     <freemarker.version>2.3.18</freemarker.version>
     <filesync.override>false</filesync.override>
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
-    <prototype.version>7.8.33-SNAPSHOT</prototype.version>
+    <prototype.version>7.8.33</prototype.version>
     <selection.plugin.version>2.05.08</selection.plugin.version>
     <forge.sitemap.version>1.04.00</forge.sitemap.version>
     <forge.properties.version>2.08.01-SA</forge.properties.version>
@@ -305,7 +305,7 @@
         <plugin>
           <groupId>com.aharpour.ebrahim</groupId>
           <artifactId>hippo-maven-plugin</artifactId>
-          <version>0.1.0-RC-4-SNAPSHOT</version>
+          <version>0.1.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
