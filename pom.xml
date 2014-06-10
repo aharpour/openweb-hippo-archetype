@@ -74,6 +74,10 @@
       <url>svn:https://svn.code.sf.net/p/openwebarchetype/code/maven2/</url>
       <layout>default</layout>
     </repository>
+    <snapshotRepository>
+        <id>openweb-nexus-snapshots</id>
+        <url>https://nexus.open-web.nl/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <build>
