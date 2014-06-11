@@ -17,7 +17,7 @@
   <name>Openweb Hippo Quick Start Archetype</name>
   <description>Open Web Hippo Quick Start Archetype: setups a web-site skeleton with slightly richer features than Hippo Site Toolkit Website Archetype.</description>
   <artifactId>openweb-hippo-quick-start-archetype</artifactId>
-  <version>1.4</version>
+  <version>1.4-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <developers>
@@ -52,7 +52,7 @@
     <connection>scm:git:git@github.com:aharpour/openweb-hippo-archetype.git</connection>
     <developerConnection>scm:git:git@github.com:aharpour/openweb-hippo-archetype.git</developerConnection>
     <url>https://github.com/aharpour/openweb-hippo-archetype</url>
-    <tag>openweb-hippo-quick-start-archetype-1.4</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <repositories>
